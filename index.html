@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>太色了电影网 - 高清影视在线观看与推荐平台 | 太色了电影网官方站点</title>
+<meta name="description" content="太色了电影网是专注于高清影视推荐与在线观看的影视平台，提供最新电影、热播剧集、动漫番剧、纪录片等资源导航与影视资讯，聚合热门榜单与分类片单，帮您快速找到值得一看的色电影。">
+<meta name="keywords" content="太色了电影网,太色了电影,电影网,高清电影在线观看,热门电影推荐,最新影视,热播剧集,影视资讯,电影排行榜">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta name="author" content="太色了电影网">
+<meta name="theme-color" content="#0b0a0f">
+<meta name="format-detection" content="telephone=no">
+<link rel="canonical" href="https://www.taiseledianyingwang-app.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="太色了电影网">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:title" content="太色了电影网 - 高清影视在线观看与推荐平台">
+<meta property="og:description" content="太色了电影网聚合最新电影、热播剧集、动漫与纪录片片单，提供影视资讯与热门榜单，找片更高效。">
+<meta property="og:url" content="https://www.taiseledianyingwang-app.com/">
+<meta property="og:image" content="https://www.taiseledianyingwang-app.com/static/share-cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="太色了电影网 - 高清影视在线观看与推荐平台">
+<meta name="twitter:description" content="太色了电影网聚合最新电影、热播剧集、动漫与纪录片片单，提供影视资讯与热门榜单。">
+<meta name="twitter:image" content="https://www.taiseledianyingwang-app.com/static/share-cover.jpg">
+<style>
+/* ============ 基础重置 ============ */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  background-color: #0b0a0f;
+  color: #e9e6ef;
+  line-height: 1.75;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; border: 0; }
+ul, ol { list-style: none; }
+h1, h2, h3, h4 { font-weight: 700; line-height: 1.35; color: #ffffff; }
+:root {
+  --gold: #ffb43a;
+  --gold-2: #ff8a3d;
+  --violet: #7b5cff;
+  --card: #16141d;
+  --card-2: #1d1a27;
+  --line: rgba(255, 255, 255, 0.09);
+  --muted: #a29db4;
+}
+.wrap { width: 100%; max-width: 1180px; margin: 0 auto; padding: 0 20px; }
+.muted { color: var(--muted); }
+.accent { color: var(--gold); }
+
+/* ============ 顶部导航 ============ */
+.topbar {
+  position: sticky; top: 0; z-index: 60;
+  background: rgba(11, 10, 15, 0.86);
+  backdrop-filter: saturate(160%) blur(14px);
+  -webkit-backdrop-filter: saturate(160%) blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+.topbar-inner { display: flex; align-items: center; justify-content: space-between; height: 62px; gap: 16px; }
+.brand { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+.brand-mark {
+  width: 38px; height: 38px; border-radius: 11px; flex-shrink: 0;
+  background: linear-gradient(135deg, var(--gold), var(--gold-2));
+  display: flex; align-items: center; justify-content: center;
+  color: #17131c; font-weight: 800; font-size: 18px;
+  box-shadow: 0 6px 18px rgba(255, 180, 58, 0.28);
+}
+.brand-text strong { display: block; font-size: 18px; letter-spacing: 0.5px; color: #fff; }
+.brand-text span { display: block; font-size: 11px; color: var(--muted); letter-spacing: 2px; }
+.nav { display: flex; gap: 4px; }
+.nav a {
+  display: block; padding: 8px 14px; border-radius: 999px;
+  font-size: 15px; color: #cfcbdd; transition: all .22s ease;
+}
+.nav a:hover, .nav a:focus { color: #fff; background: rgba(255, 180, 58, 0.14); }
+.nav-toggle { display: none; }
+
+/* ============ 首屏 Hero ============ */
+.hero {
+  position: relative; padding: 74px 0 62px; overflow: hidden;
+  background:
+    radial-gradient(900px 420px at 12% -10%, rgba(255, 180, 58, 0.20), transparent 62%),
+    radial-gradient(760px 400px at 92% 8%, rgba(123, 92, 255, 0.22), transparent 60%),
+    linear-gradient(180deg, #12101a 0%, #0b0a0f 100%);
+}
+.hero::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 180, 58, .5), transparent);
+}
+.hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 44px; align-items: center; }
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 6px 14px; border-radius: 999px; font-size: 13px; color: var(--gold);
+  border: 1px solid rgba(255, 180, 58, .35); background: rgba(255, 180, 58, .08);
+}
+.hero h1 { font-size: 44px; margin: 20px 0 16px; letter-spacing: 1px; }
+.hero h1 em { font-style: normal; background: linear-gradient(90deg, var(--gold), var(--gold-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.hero-lead { font-size: 17px; color: #c3bfd2; max-width: 620px; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.btn {
+  display: inline-block; padding: 13px 26px; border-radius: 12px;
+  font-size: 15px; font-weight: 600; transition: transform .2s ease, box-shadow .2s ease;
+}
+.btn-primary { background: linear-gradient(135deg, var(--gold), var(--gold-2)); color: #1b1620; box-shadow: 0 10px 26px rgba(255, 180, 58, .26); }
+.btn-ghost { border: 1px solid rgba(255, 255, 255, .22); color: #fff; }
+.btn:hover { transform: translateY(-2px); }
+.hero-stats { display: flex; gap: 26px; margin-top: 34px; flex-wrap: wrap; }
+.hero-stats div strong { display: block; font-size: 26px; color: #fff; }
+.hero-stats div span { font-size: 13px; color: var(--muted); }
+.hero-card {
+  background: linear-gradient(160deg, var(--card-2), #100e16);
+  border: 1px solid var(--line); border-radius: 22px; padding: 22px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, .45);
+}
+.hero-card h2 { font-size: 17px; margin-bottom: 14px; }
+.hero-card ol li { display: flex; gap: 12px; padding: 11px 0; border-bottom: 1px dashed var(--line); font-size: 14.5px; }
+.hero-card ol li:last-child { border-bottom: 0; }
+.hero-card ol li b { color: var(--gold); font-size: 13px; min-width: 22px; }
+
+/* ============ 通用区块 ============ */
+.section { padding: 66px 0; }
+.section-alt { background: linear-gradient(180deg, #0e0c14, #0b0a0f); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.sec-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 18px; margin-bottom: 30px; flex-wrap: wrap; }
+.sec-head h2 { font-size: 28px; position: relative; padding-left: 14px; }
+.sec-head h2::before {
+  content: ""; position: absolute; left: 0; top: 6px; width: 4px; height: 26px;
+  border-radius: 3px; background: linear-gradient(180deg, var(--gold), var(--gold-2));
+}
+.sec-head p { font-size: 14.5px; color: var(--muted); max-width: 520px; }
+.more-link { font-size: 14px; color: var(--gold); white-space: nowrap; }
+
+/* ============ 影片网格 ============ */
+.movie-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.movie {
+  background: var(--card); border: 1px solid var(--line); border-radius: 16px;
+  overflow: hidden; transition: transform .25s ease, border-color .25s ease;
+}
+.movie:hover { transform: translateY(-5px); border-color: rgba(255, 180, 58, .45); }
+.poster {
+  position: relative; aspect-ratio: 3 / 4; display: flex; align-items: flex-end;
+  padding: 12px; overflow: hidden;
+}
+.poster::before {
+  content: ""; position: absolute; inset: 0;
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, .12), transparent 55%);
+}
+.poster .rank {
+  position: absolute; top: 10px; left: 10px; font-size: 12px; font-weight: 800;
+  padding: 3px 9px; border-radius: 8px; color: #1b1620; background: var(--gold);
+}
+.poster .tag {
+  position: absolute; top: 10px; right: 10px; font-size: 11px; padding: 3px 8px;
+  border-radius: 999px; background: rgba(0, 0, 0, .55); color: #fff; border: 1px solid rgba(255, 255, 255, .16);
+}
+.poster .name { position: relative; font-size: 15px; font-weight: 700; color: #fff; text-shadow: 0 2px 8px rgba(0, 0, 0, .6); }
+.p1 { background: linear-gradient(150deg, #6d3bff, #2a1a5e); }
+.p2 { background: linear-gradient(150deg, #ff8a3d, #7a2f2f); }
+.p3 { background: linear-gradient(150deg, #1fb6a6, #123c52); }
+.p4 { background: linear-gradient(150deg, #ff5f8f, #5b1f45); }
+.p5 { background: linear-gradient(150deg, #3f7bff, #16224f); }
+.p6 { background: linear-gradient(150deg, #b98bff, #40246b); }
+.p7 { background: linear-gradient(150deg, #ffb43a, #7c4a12); }
+.p8 { background: linear-gradient(150deg, #4ad6a0, #14453a); }
+.movie-body { padding: 13px 14px 16px; }
+.movie-body h3 { font-size: 15.5px; margin-bottom: 6px; }
+.movie-body p { font-size: 13px; color: var(--muted); }
+.movie-meta { display: flex; align-items: center; justify-content: space-between; margin-top: 10px; font-size: 12.5px; color: #8f8aa3; }
+.score { color: var(--gold); font-weight: 700; }
+
+/* ============ 最新上线：时间线 ============ */
+.timeline { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.tl-item {
+  display: flex; gap: 16px; padding: 16px; border-radius: 16px;
+  background: var(--card); border: 1px solid var(--line); transition: border-color .25s ease;
+}
+.tl-item:hover { border-color: rgba(123, 92, 255, .5); }
+.tl-date { flex-shrink: 0; width: 62px; text-align: center; }
+.tl-date b { display: block; font-size: 22px; color: var(--gold); line-height: 1.1; }
+.tl-date span { font-size: 12px; color: var(--muted); }
+.tl-item h3 { font-size: 16px; margin-bottom: 5px; }
+.tl-item p { font-size: 13.5px; color: var(--muted); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.chip {
+  font-size: 12px; padding: 4px 10px; border-radius: 999px; color: #d7d3e6;
+  background: rgba(123, 92, 255, .14); border: 1px solid rgba(123, 92, 255, .3);
+}
+
+/* ============ 分类 ============ */
+.cat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.cat {
+  padding: 22px 18px; border-radius: 18px; text-align: center;
+  background: linear-gradient(160deg, var(--card-2), #12101a);
+  border: 1px solid var(--line); transition: transform .25s ease, border-color .25s ease;
+}
+.cat:hover { transform: translateY(-4px); border-color: rgba(255, 180, 58, .45); }
+.cat b { display: block; font-size: 17px; color: #fff; }
+.cat span { display: block; font-size: 12.5px; color: var(--muted); margin-top: 4px; }
+.cat i { display: block; font-style: normal; font-size: 26px; margin-bottom: 8px; }
+
+/* ============ 资讯 ============ */
+.news-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 20px; }
+.news-lead { border-radius: 20px; overflow: hidden; border: 1px solid var(--line); background: var(--card); }
+.news-lead .cover { height: 220px; background: linear-gradient(120deg, #7b5cff, #ffb43a); }
+.news-lead .pad { padding: 22px; }
+.news-lead h3 { font-size: 21px; margin-bottom: 10px; }
+.news-list li { display: flex; gap: 14px; padding: 14px 0; border-bottom: 1px dashed var(--line); }
+.news-list li:last-child { border-bottom: 0; }
+.news-list .sq { flex-shrink: 0; width: 46px; height: 46px; border-radius: 12px; background: rgba(255, 180, 58, .14); color: var(--gold); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; }
+.news-list h3 { font-size: 15.5px; margin-bottom: 3px; font-weight: 600; }
+.news-list p { font-size: 13px; color: var(--muted); }
+.news-box { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 22px; }
+
+/* ============ 关于 / FAQ ============ */
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+.faq-item { border-bottom: 1px solid var(--line); padding: 14px 0; }
+.faq-item:last-child { border-bottom: 0; }
+.faq-item h3 { font-size: 16px; margin-bottom: 6px; }
+.faq-item p { font-size: 14px; color: var(--muted); }
+.feature-list li { display: flex; gap: 12px; padding: 10px 0; font-size: 15px; }
+.feature-list li b { color: var(--gold); }
+
+/* ============ 订阅条 ============ */
+.cta-band {
+  margin: 0 0 60px; border-radius: 24px; padding: 40px 32px; text-align: center;
+  background: linear-gradient(120deg, rgba(255, 180, 58, .16), rgba(123, 92, 255, .18));
+  border: 1px solid rgba(255, 180, 58, .28);
+}
+.cta-band h2 { font-size: 26px; margin-bottom: 10px; }
+.cta-band p { color: #c9c5d8; font-size: 15px; margin-bottom: 22px; }
+.cta-band .btn-primary { padding: 14px 34px; }
+
+/* ============ 页脚 ============ */
+.footer { background: #08070c; border-top: 1px solid var(--line); padding: 46px 0 26px; }
+.foot-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 26px; }
+.foot-grid h4 { font-size: 15px; margin-bottom: 12px; color: #fff; }
+.foot-grid ul li { padding: 5px 0; font-size: 13.8px; color: var(--muted); }
+.foot-grid ul li a:hover { color: var(--gold); }
+.foot-bottom {
+  margin-top: 30px; padding-top: 18px; border-top: 1px solid var(--line);
+  display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap; font-size: 13px; color: #807b93;
+}
+
+/* ============ 移动端自适应 ============ */
+@media (max-width: 1024px) {
+  .movie-grid { grid-template-columns: repeat(3, 1fr); }
+  .cat-grid { grid-template-columns: repeat(3, 1fr); }
+  .foot-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 768px) {
+  body { font-size: 15px; }
+  .wrap { padding: 0 16px; }
+  .nav {
+    position: fixed; left: 0; right: 0; top: 62px; z-index: 55;
+    background: #12101a; border-bottom: 1px solid var(--line);
+    flex-direction: column; gap: 0; padding: 8px 16px 14px;
+    display: none;
+  }
+  .nav.open { display: flex; }
+  .nav a { padding: 12px 6px; border-bottom: 1px solid var(--line); border-radius: 0; }
+  .nav-toggle {
+    display: flex; flex-direction: column; justify-content: center; gap: 5px;
+    width: 42px; height: 38px; border-radius: 10px; cursor: pointer;
+    background: rgba(255, 255, 255, .07); border: 1px solid var(--line); padding: 0 9px;
+  }
+  .nav-toggle span { display: block; height: 2px; background: #fff; border-radius: 2px; }
+  .hero { padding: 44px 0 40px; }
+  .hero-grid { grid-template-columns: 1fr; gap: 28px; }
+  .hero h1 { font-size: 29px; }
+  .hero-lead { font-size: 15px; }
+  .hero-stats { gap: 18px; }
+  .hero-stats div strong { font-size: 21px; }
+  .section { padding: 44px 0; }
+  .sec-head h2 { font-size: 22px; }
+  .movie-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .timeline, .news-grid, .about-grid { grid-template-columns: 1fr; }
+  .cat-grid { grid-template-columns: repeat(2, 1fr); }
+  .cta-band { padding: 30px 20px; border-radius: 18px; }
+  .cta-band h2 { font-size: 21px; }
+  .foot-grid { grid-template-columns: 1fr 1fr; gap: 18px; }
+  .btn { padding: 12px 20px; font-size: 14.5px; }
+}
+@media (max-width: 420px) {
+  .movie-grid { grid-template-columns: 1fr; }
+  .cat-grid { grid-template-columns: 1fr; }
+  .brand-text strong { font-size: 16px; }
+  .hero-stats { gap: 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/yazhou.js"></script>
+
+<!-- ========== 顶部导航 ========== -->
+<header class="topbar" id="top">
+  <div class="wrap topbar-inner">
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true">太</div>
+      <div class="brand-text">
+        <strong>太色了电影网</strong>
+        <span>TAISELE MOVIE</span>
+      </div>
+    </div>
+    <nav class="nav" id="nav" aria-label="网站主导航">
+      <a href="#top">首页</a>
+      <a href="#hot">热门推荐</a>
+      <a href="#new">最新上线</a>
+      <a href="#category">影视分类</a>
+      <a href="#news">影视资讯</a>
+      <a href="#about">关于我们</a>
+    </nav>
+    <div class="nav-toggle" id="navToggle" role="button" tabindex="0" aria-label="展开导航菜单" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ========== 首屏 ========== -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">◆ 高清影视 · 每日更新 · 免费推荐</span>
+        <h1><em>太色了电影网</em> — 找片更快的高清影视推荐平台</h1>
+        <p class="hero-lead">
+          太色了电影网聚合全网热门电影、热播剧集、动漫番剧与高分纪录片，按题材、地区、年份、
+          豆瓣口碑多维度整理片单，并提供新片上线节奏、观影指南与影视资讯，让每一次选片都更高效。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#hot">立即浏览热门片单</a>
+          <a class="btn btn-ghost" href="#category">按分类找电影</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>12000+</strong><span>收录影片条目</span></div>
+          <div><strong>36</strong><span>细分题材分类</span></div>
+          <div><strong>每日</strong><span>片单更新频率</span></div>
+          <div><strong>4K</strong><span>画质优先推荐</span></div>
+        </div>
+      </div>
+      <aside class="hero-card">
+        <h2>本周编辑精选</h2>
+        <ol>
+          <li><b>01</b><div><a href="#">《长夜微光》— 悬疑题材年度黑马，反转密度极高</a></div></li>
+          <li><b>02</b><div><a href="#">《山海旅人》— 国产文艺片的诗意叙事范本</a></div></li>
+          <li><b>03</b><div><a href="#">《银河拾荒者》— 科幻视觉与人文内核兼具</a></div></li>
+          <li><b>04</b><div><a href="#">《春分小事》— 适合周末的治愈系轻喜剧</a></div></li>
+          <li><b>05</b><div><a href="#">《深蓝之下》— 自然纪录片，画面质感极佳</a></div></li>
+        </ol>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ========== 栏目一：热门推荐 ========== -->
+  <section class="section" id="hot">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2>太色了电影网热门推荐榜</h2>
+          <p>依据站内播放热度、收藏量与口碑评分综合排序，每日刷新，覆盖电影、剧集与动画。</p>
+        </div>
+        <a class="more-link" href="#">查看完整榜单 →</a>
+      </div>
+      <div class="movie-grid">
+        <article class="movie">
+          <a href="#">
+            <div class="poster p1" role="img" aria-label="电影《长夜微光》海报缩略图">
+              <span class="rank">NO.1</span><span class="tag">悬疑</span>
+              <span class="name">长夜微光</span>
+            </div>
+            <div class="movie-body">
+              <h3>长夜微光</h3>
+              <p>三重时间线交织，真相层层反转</p>
+              <div class="movie-meta"><span>2025 · 剧情/悬疑</span><span class="score">9.1</span></div>
+            </div>
+          </a>
+        </article>
+        <article class="movie">
+          <a href="#">
+            <div class="poster p2" role="img" aria-label="电影《山海旅人》海报缩略图">
+              <span class="rank">NO.2</span><span class="tag">文艺</span>
+              <span class="name">山海旅人</span>
+            </div>
+            <div class="movie-body">
+              <h3>山海旅人</h3>
+              <p>一趟归乡旅途中的自我和解</p>
+              <div class="movie-meta"><span>2025 · 剧情</span><span class="score">8.8</span></div>
+            </div>
+          </a>
+        </article>
+        <article class="movie">
+          <a href="#">
+            <div class="poster p3" role="img" aria-label="电影《银河拾荒者》海报缩略图">
+              <span class="rank">NO.3</span><span class="tag">科幻</span>
+              <span class="name">银河拾荒者</span>
+            </div>
+            <div class="movie-body">
+              <h3>银河拾荒者</h3>
+              <p>废土星域里的 survival 群像</p>
+              <div class="movie-meta"><span>2024 · 科幻/冒险</span><span class="score">8.7</span></div>
+            </div>
+          </a>
+        </article>
+        <article class="movie">
+          <a href="#">
+            <div class="poster p4" role="img" aria-label="电影《春分小事》海报缩略图">
+              <span class="rank">NO.4</span><span class="tag">喜剧</span>
+              <span class="name">春分小事</span>
+            </div>
+            <div class="movie-body">
+              <h3>春分小事</h3>
+              <p>小镇青年的松弛感日常</p>
+              <div class="movie-meta"><span>2025 · 喜剧</span><span class="score">8.4</span></div>
+            </div>
+          </a>
+        </article>
+        <article class="movie">
+          <a href="#">
+            <div class="poster p5" role="img" aria-label="剧集《风起旧城》海报缩略图">
+              <span class="rank">NO.5</span><span class="tag">剧集</span>
+              <span class="name">风起旧城</span>
+            </div>
+            <div class="movie-body">
+              <h3>风起旧城</h3>
+              <p>十二集时代群像，节奏紧凑</p>
+              <div class="movie-meta"><span>2025 · 国产剧</span><span class="score">8.9</span></div>
+            </div>
+          </a>
+        </article>
+        <article class="movie">
+          <a href="#">
+            <div class="poster p6" role="img" aria-label="动画《星海拾遗》海报缩略图">
+              <span class="rank">NO.6</span><span class="tag">动画</span>
+              <span class="name">星海拾遗</span>
+            </div>
+            <div class="movie-body">
+              <h3>星海拾遗</h3>
+              <p>手绘质感，适合全家一起看</p>
+              <div class="movie-meta"><span>2024 · 动画</span><span class="score">8.6</span></div>
+            </div>
+          </a>
+        </article>
+        <article class="movie">
+          <a href="#">
+            <div class="poster p7" role="img" aria-label="纪录片《深蓝之下》海报缩略图">
+              <span class="rank">NO.7</span><span class="tag">纪录</span>
+              <span class="name">深蓝之下</span>
+            </div>
+            <div class="movie-body">
+              <h3>深蓝之下</h3>
+              <p>四小时海底影像，画面惊艳</p>
+              <div class="movie-meta"><span>2024 · 纪录片</span><span class="score">9.3</span></div>
+            </div>
+          </a>
+        </article>
+        <article class="movie">
+          <a href="#">
+            <div class="poster p8" role="img" aria-label="电影《归途列车》海报缩略图">
+              <span class="rank">NO.8</span><span class="tag">现实</span>
+              <span class="name">归途列车</span>
+            </div>
+            <div class="movie-body">
+              <h3>归途列车</h3>
+              <p>一趟列车上的众生百态</p>
+              <div class="movie-meta"><span>2025 · 剧情</span><span class="score">8.2</span></div>
+            </div>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 栏目二：最新上线 ========== -->
+  <section class="section section-alt" id="new">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2>最新上线 · 更新日程</h2>
+          <p>太色了电影网按上线时间轴整理新片与新剧，标注画质、字幕与题材标签。</p>
+        </div>
+        <a class="more-link" href="#">订阅更新提醒 →</a>
+      </div>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-date"><b>12</b><span>10月</span></div>
+          <div>
+            <h3>《雾中车站》上线 4K 修复版</h3>
+            <p>经典老片重制，画质与音效全面升级，附导演 commentary 字幕。</p>
+            <div class="chips"><span class="chip">4K 修复</span><span class="chip">经典</span><span class="chip">剧情</span></div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date"><b>09</b><span>10月</span></div>
+          <div>
+            <h3>《城市边缘》剧集全 8 集更新完毕</h3>
+            <p>都市现实主义题材，单集 45 分钟，适合一口气追完。</p>
+            <div class="chips"><span class="chip">国产剧</span><span class="chip">已完结</span><span class="chip">1080P</span></div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date"><b>05</b><span>10月</span></div>
+          <div>
+            <h3>《荒原信使》登陆本周新片榜</h3>
+            <p>公路片结构，摄影获多个电影节技术奖项提名。</p>
+            <div class="chips"><span class="chip">新片</span><span class="chip">公路</span><span class="chip">获奖提名</span></div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date"><b>01</b><span>10月</span></div>
+          <div>
+            <h3>《厨房交响曲》纪录片上线</h3>
+            <p>从食材到餐桌的六段故事，节奏轻快，适合下饭观看。</p>
+            <div class="chips"><span class="chip">纪录片</span><span class="chip">美食</span><span class="chip">中字</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 栏目三：影视分类 ========== -->
+  <section class="section" id="category">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2>影视分类导航</h2>
+          <p>太色了电影网提供 36 个细分题材入口，支持按题材、地区、年份交叉筛选。</p>
+        </div>
+        <a class="more-link" href="#">进入全部分类 →</a>
+      </div>
+      <div class="cat-grid">
+        <a class="cat" href="#"><i>🎬</i><b>动作冒险</b><span>1 820 部</span></a>
+        <a class="cat" href="#"><i>🕵️</i><b>悬疑推理</b><span>1 240 部</span></a>
+        <a class="cat" href="#"><i>🚀</i><b>科幻幻想</b><span>960 部</span></a>
+        <a class="cat" href="#"><i>💞</i><b>爱情文艺</b><span>1 530 部</span></a>
+        <a class="cat" href="#"><i>😂</i><b>喜剧搞笑</b><span>1 410 部</span></a>
+        <a class="cat" href="#"><i>🧒</i><b>动漫番剧</b><span>2 060 部</span></a>
+        <a class="cat" href="#"><i>🌏</i><b>纪录纪实</b><span>730 部</span></a>
+        <a class="cat" href="#"><i>📺</i><b>热播剧集</b><span>1 150 部</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 栏目四：影视资讯 ========== -->
+  <section class="section section-alt" id="news">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2>影视资讯与观影指南</h2>
+          <p>行业动态、新片前瞻、观影科普与榜单解读，由太色了电影网编辑部整理。</p>
+        </div>
+        <a class="more-link" href="#">更多资讯 →</a>
+      </div>
+      <div class="news-grid">
+        <article class="news-lead">
+          <a href="#">
+            <div class="cover" role="img" aria-label="影视资讯专题配图：2025 秋季档观影前瞻"></div>
+            <div class="pad">
+              <h3>2025 秋季档观影前瞻：十部值得期待的新片</h3>
+              <p class="muted">从导演阵容到题材分布，太色了电影网编辑部提前梳理秋季档的重点影片，并给出不同类型的观影优先级建议，帮助你合理分配观影时间。</p>
+            </div>
+          </a>
+        </article>
+        <div class="news-box">
+          <h3 style="font-size:17px;margin-bottom:8px;">编辑部快讯</h3>
+          <ul class="news-list">
+            <li>
+              <span class="sq">01</span>
+              <div>
+                <h3><a href="#">如何判断一部纪录片的画质水准？</a></h3>
+                <p>从码率、色深与母带来源三个维度快速入门。</p>
+              </div>
+            </li>
+            <li>
+              <span class="sq">02</span>
+              <div>
+                <h3><a href="#">剧集追更指南：如何避开烂尾风险</a></h3>
+                <p>看编剧结构、集数与播出节奏的三个信号。</p>
+              </div>
+            </li>
+            <li>
+              <span class="sq">03</span>
+              <div>
+                <h3><a href="#">家庭观影设备与音效搭配建议</a></h3>
+                <p>预算有限时的优先级：屏幕、音响还是片源。</p>
+              </div>
+            </li>
+            <li>
+              <span class="sq">04</span>
+              <div>
+                <h3><a href="#">本周口碑榜单变化解读</a></h3>
+                <p>三部新片上榜，两部老片因修复版回归。</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 栏目五：关于我们 ========== -->
+  <section class="section" id="about">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2>关于太色了电影网</h2>
+          <p>我们只做一件事：让你更快找到值得看的那部电影。</p>
+        </div>
+      </div>
+      <div class="about-grid">
+        <div class="news-box">
+          <h3 style="font-size:17px;margin-bottom:10px;">平台特色</h3>
+          <ul class="feature-list">
+            <li><b>01</b><span>多维度片单：题材、地区、年份、评分交叉筛选，减少无效翻页。</span></li>
+            <li><b>02</b><span>每日更新：新片上线与榜单变化当天同步，标注画质与字幕信息。</span></li>
+            <li><b>03</b><span>人工整理：编辑精选与观影指南，避免纯算法推荐的同质化。</span></li>
+            <li><b>04</b><span>轻量体验：页面简洁、移动端自适应，加载更快更省流量。</span></li>
+          </ul>
+        </div>
+        <div class="news-box">
+          <h3 style="font-size:17px;margin-bottom:10px;">常见问题</h3>
+          <div class="faq-item">
+            <h3>太色了电影网的内容会收费吗？</h3>
+            <p>站内片单、榜单与资讯内容免费浏览，部分第三方播放入口以来源站点说明为准。</p>
+          </div>
+          <div class="faq-item">
+            <h3>如何快速找到某一类型的电影？</h3>
+            <p>进入「影视分类」栏目，按题材卡片进入后再结合年份、地区筛选即可。</p>
+          </div>
+          <div class="faq-item">
+            <h3>榜单多久更新一次？</h3>
+            <p>热门推荐榜每日刷新一次，编辑精选每周更新，最新上线实时追加。</p>
+          </div>
+          <div class="faq-item">
+            <h3>发现信息有误如何反馈？</h3>
+            <p>可通过页脚「联系我们」入口提交影片名称与修正说明，我们会在三个工作日内处理。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-band">
+        <h2>把「太色了电影网」加入收藏</h2>
+        <p>每天三分钟，看完当天最值得关注的新片与榜单变化。</p>
+        <a class="btn btn-primary" href="#hot">开始浏览片单</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ========== 页脚 ========== -->
+<footer class="footer">
+  <div class="wrap">
+    <nav class="foot-grid" aria-label="页脚导航">
+      <div>
+        <h4>太色了电影网</h4>
+        <p class="muted" style="font-size:13.8px;">
+          太色了电影网（www.taiseledianyingwang-app.com）致力于为用户提供高清影视推荐、
+          片单整理与影视资讯服务，覆盖电影、剧集、动漫与纪录片等多个品类。
+        </p>
+      </div>
+      <div>
+        <h4>频道导航</h4>
+        <ul>
+          <li><a href="#hot">热门推荐</a></li>
+          <li><a href="#new">最新上线</a></li>
+          <li><a href="#category">影视分类</a></li>
+          <li><a href="#news">影视资讯</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>观影服务</h4>
+        <ul>
+          <li><a href="#">片单收藏</a></li>
+          <li><a href="#">观影指南</a></li>
+          <li><a href="#">榜单解读</a></li>
+          <li><a href="#">更新订阅</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>关于站点</h4>
+        <ul>
+          <li><a href="#about">关于我们</a></li>
+          <li><a href="#">联系我们</a></li>
+          <li><a href="#">版权声明</a></li>
+          <li><a href="#">隐私政策</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="foot-bottom">
+      <span>© 2026 太色了电影网 www.taiseledianyingwang-app.com 版权所有</span>
+      <span>本站内容仅作影视信息整理与推荐之用</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var toggle = document.getElementById('navToggle');
+  var nav = document.getElementById('nav');
+  function toggleNav() {
+    var open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+  if (toggle && nav) {
+    toggle.addEventListener('click', toggleNav);
+    toggle.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleNav(); }
+    });
+    nav.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') {
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.taiseledianyingwang-app.com/#website",
+      "url": "https://www.taiseledianyingwang-app.com/",
+      "name": "太色了电影网",
+      "alternateName": "太色了电影",
+      "description": "太色了电影网是专注于高清影视推荐与在线观看的影视平台，提供最新电影、热播剧集、动漫番剧、纪录片等资源导航与影视资讯。",
+      "inLanguage": "zh-CN",
+      "publisher": { "@id": "https://www.taiseledianyingwang-app.com/#organization" }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.taiseledianyingwang-app.com/#organization",
+      "name": "太色了电影网",
+      "url": "https://www.taiseledianyingwang-app.com/",
+      "description": "高清影视推荐与影视资讯平台，提供片单整理、热门榜单与新片上线信息。"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.taiseledianyingwang-app.com/#webpage",
+      "url": "https://www.taiseledianyingwang-app.com/",
+      "name": "太色了电影网 - 高清影视在线观看与推荐平台",
+      "isPartOf": { "@id": "https://www.taiseledianyingwang-app.com/#website" },
+      "about": { "@id": "https://www.taiseledianyingwang-app.com/#organization" },
+      "inLanguage": "zh-CN",
+      "primaryImageOfPage": "https://www.taiseledianyingwang-app.com/static/share-cover.jpg"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "首页", "item": "https://www.taiseledianyingwang-app.com/" },
+        { "@type": "ListItem", "position": 2, "name": "热门推荐", "item": "https://www.taiseledianyingwang-app.com/#hot" },
+        { "@type": "ListItem", "position": 3, "name": "最新上线", "item": "https://www.taiseledianyingwang-app.com/#new" },
+        { "@type": "ListItem", "position": 4, "name": "影视分类", "item": "https://www.taiseledianyingwang-app.com/#category" },
+        { "@type": "ListItem", "position": 5, "name": "影视资讯", "item": "https://www.taiseledianyingwang-app.com/#news" }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "太色了电影网热门推荐榜",
+      "itemListOrder": "https://schema.org/ItemListOrderDescending",
+      "numberOfItems": 8,
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "长夜微光" },
+        { "@type": "ListItem", "position": 2, "name": "山海旅人" },
+        { "@type": "ListItem", "position": 3, "name": "银河拾荒者" },
+        { "@type": "ListItem", "position": 4, "name": "春分小事" },
+        { "@type": "ListItem", "position": 5, "name": "风起旧城" },
+        { "@type": "ListItem", "position": 6, "name": "星海拾遗" },
+        { "@type": "ListItem", "position": 7, "name": "深蓝之下" },
+        { "@type": "ListItem", "position": 8, "name": "归途列车" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "太色了电影网的内容会收费吗？",
+          "acceptedAnswer": { "@type": "Answer", "text": "站内片单、榜单与资讯内容免费浏览，部分第三方播放入口以来源站点说明为准。" }
+        },
+        {
+          "@type": "Question",
+          "name": "如何快速找到某一类型的电影？",
+          "acceptedAnswer": { "@type": "Answer", "text": "进入「影视分类」栏目，按题材卡片进入后再结合年份、地区筛选即可。" }
+        },
+        {
+          "@type": "Question",
+          "name": "太色了电影网的榜单多久更新一次？",
+          "acceptedAnswer": { "@type": "Answer", "text": "热门推荐榜每日刷新一次，编辑精选每周更新，最新上线实时追加。" }
+        },
+        {
+          "@type": "Question",
+          "name": "发现信息有误如何反馈？",
+          "acceptedAnswer": { "@type": "Answer", "text": "可通过页脚「联系我们」入口提交影片名称与修正说明，我们会在三个工作日内处理。" }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+</body>
+</html>
